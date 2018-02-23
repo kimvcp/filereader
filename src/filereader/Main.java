@@ -11,19 +11,20 @@ import java.io.InputStreamReader;
 import javafx.beans.binding.StringBinding;
 
 /**
- * Main class for reading files.
+ * Main class for creating task objects, creates a TaskTimer, and then uses
+ * TaskTimer to run the tasks.
  * 
  * @author Vichaphol Thamsuthikul
  *
  */
-public class main {
+public class Main {
 
 	public static void main(String[] args) {
+		TaskTimer taskTimer = new TaskTimer();
 		System.out.println("Reading Alice-in-Wonderland (new).txt using FileReader, append to String");
-		TaskTimer.runTask(new AppendStringTask());
-		System.out.println("Reading Alice-in-Wonderland (new).txt using FileReader, append to StringBuilder");
-		TaskTimer.runTask(new AppendStringBuilder());
+		taskTimer.runTask(new AppendStringTask());
+		taskTimer.runTask(new AppendStringBuilder());
 		System.out.println("Reading Alice-in-Wonderland (new).txt using BufferedReader, append lines to String");
-		TaskTimer.runTask(new AppendStringBuffer());
+		taskTimer.runTask(new AppendStringBuffer());
 	}
 }

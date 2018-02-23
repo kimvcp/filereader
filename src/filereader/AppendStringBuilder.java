@@ -7,19 +7,25 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * 
+ * A class that read a text file one character at a time. Append all the characters to a
+ * StringBuilder.
  * 
  * @author Vichaphol Thamsutikul
  *
  */
 public class AppendStringBuilder implements Runnable {
+	/** Creating StringBuilder object */
+	private StringBuilder sBuilder = new StringBuilder();
 
-	public static String readFileToStringBuilder(String filename) {
-		StringBuilder sBuilder = null;
+	/**
+	 * Read a file to a StringBuilder object.
+	 * 
+	 */
+	@Override
+	public void run() {
 		InputStream in = null;
 		try {
-			sBuilder = new StringBuilder();
-			in = new FileInputStream(filename);
+			in = new FileInputStream("src/Alice-in-Wonderland (new).txt");
 			InputStreamReader reader = new InputStreamReader(in);
 			int c;
 			while (true) {
@@ -40,11 +46,12 @@ public class AppendStringBuilder implements Runnable {
 			} catch (IOException e) {
 				System.out.println(e.getMessage());
 			}
-		return sBuilder.toString();
 	}
 
-	public void run() {
-		String alice = readFileToStringBuilder("src/Alice-in-Wonderland (new).txt");
-		System.out.printf("Read %d chars", alice.length());
+	@Override
+	public String toString() {
+		return String.format(
+				"Reading Alice-in-Wonderland (new).txt using FileReader, append to StringBuilder\nRead %d chars",
+				sBuilder.length());
 	}
 }

@@ -4,7 +4,7 @@ import java.sql.Time;
 import java.util.Timer;
 
 /**
- * 
+ * A class that computes elapsed time between a start and stop time.
  * 
  * @author Vichaphol Thamsutikul
  *

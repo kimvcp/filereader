@@ -6,20 +6,29 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * 
+ * A class that read a text file one character at a time. Append all the
+ * characters to a String.
  * 
  * @author Vichaphol Thamsutikul
  *
  */
 public class AppendStringBuffer implements Runnable {
+	/** Creating String result */
+	private String result = "";
 
-	public static String readFileByLine(String filename) {
+	/**
+	 * Read the file as text one line at a time using a BufferedReader, and append
+	 * the result to a String.
+	 * 
+	 */
+	@Override
+	public void run() {
 		FileReader reader = null;
 		BufferedReader br = null;
 		String result = "";
 		String line;
 		try {
-			reader = new FileReader(filename);
+			reader = new FileReader("src/Alice-in-Wonderland (new).txt");
 			br = new BufferedReader(reader);
 			while ((line = br.readLine()) != null)
 				result = result + line + '\n';
@@ -35,11 +44,17 @@ public class AppendStringBuffer implements Runnable {
 			} catch (IOException e) {
 				System.out.println(e.getMessage());
 			}
-		return result;
 	}
 
-	public void run() {
-		String alice = readFileByLine("src/Alice-in-Wonderland (new).txt");
-		System.out.printf("Read %d chars", alice.length());
+	/**
+	 * Print the words
+	 * @return the words
+	 */
+	@Override
+	public String toString() {
+		return String.format(
+				"Reading Alice-in-Wonderland (new).txt using BufferedReader, append lines to String\nRead %d chars",
+				result.length());
 	}
+
 }

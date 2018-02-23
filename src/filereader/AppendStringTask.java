@@ -7,14 +7,21 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * 
+ * A class that read a text file one character at a time. Append all the characters to a
+ * String.
  * 
  * @author Vichaphol Thamsutikul
  *
  */
-public class AppendStringTask implements Runnable{
-
-	public static String readFileToString(String filename) {
+public class AppendStringTask implements Runnable {
+	/**
+	 * Read a text file one character at a time. Append all the characters to a
+	 * String and return the String.
+	 * 
+	 * @param filename
+	 * @return the data
+	 */
+	public String readFileToString(String filename) {
 		String data = "";
 		InputStream in = null;
 		try {
