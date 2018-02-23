@@ -7,18 +7,20 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * A class that read a text file one character at a time. Append all the characters to a
- * StringBuilder.
+ * A class that read a text file one character at a time. Append all the
+ * characters to a String and return the String.
  * 
  * @author Vichaphol Thamsutikul
  *
  */
 public class AppendStringBuilder implements Runnable {
+
 	/** Creating StringBuilder object */
 	private StringBuilder sBuilder = new StringBuilder();
 
 	/**
-	 * Read a file to a StringBuilder object.
+	 * Read a text file one character at a time. Append all the characters to a
+	 * StringBuilder's object
 	 * 
 	 */
 	@Override
@@ -48,6 +50,11 @@ public class AppendStringBuilder implements Runnable {
 			}
 	}
 
+	/**
+	 * Print the words
+	 * 
+	 * @return the words
+	 */
 	@Override
 	public String toString() {
 		return String.format(

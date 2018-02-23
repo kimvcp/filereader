@@ -7,12 +7,13 @@ import java.io.IOException;
 
 /**
  * A class that read a text file one character at a time. Append all the
- * characters to a String.
+ * characters to a String and return the String.
  * 
  * @author Vichaphol Thamsutikul
  *
  */
 public class AppendStringBuffer implements Runnable {
+	
 	/** Creating String result */
 	private String result = "";
 
@@ -25,7 +26,6 @@ public class AppendStringBuffer implements Runnable {
 	public void run() {
 		FileReader reader = null;
 		BufferedReader br = null;
-		String result = "";
 		String line;
 		try {
 			reader = new FileReader("src/Alice-in-Wonderland (new).txt");
@@ -48,6 +48,7 @@ public class AppendStringBuffer implements Runnable {
 
 	/**
 	 * Print the words
+	 * 
 	 * @return the words
 	 */
 	@Override

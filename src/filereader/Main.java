@@ -20,11 +20,8 @@ import javafx.beans.binding.StringBinding;
 public class Main {
 
 	public static void main(String[] args) {
-		TaskTimer taskTimer = new TaskTimer();
-		System.out.println("Reading Alice-in-Wonderland (new).txt using FileReader, append to String");
-		taskTimer.runTask(new AppendStringTask());
-		taskTimer.runTask(new AppendStringBuilder());
-		System.out.println("Reading Alice-in-Wonderland (new).txt using BufferedReader, append lines to String");
-		taskTimer.runTask(new AppendStringBuffer());
+		TaskTimer.runTask(new AppendStringTask());
+		TaskTimer.runTask(new AppendStringBuilder());
+		TaskTimer.runTask(new AppendStringBuffer());
 	}
 }

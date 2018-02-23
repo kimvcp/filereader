@@ -7,6 +7,7 @@ package filereader;
  *
  */
 public class TaskTimer {
+	
 	/** Creating Stopwatch's object */
 	private static Stopwatch stopwatch = new Stopwatch();
 	
@@ -17,7 +18,6 @@ public class TaskTimer {
 	 *            Runnabla's object
 	 */
 	public static void runTask(Runnable task) {
-		// describe the task by calling its toString()
 		stopwatch.start();
 		task.run();
 		stopwatch.stop();
