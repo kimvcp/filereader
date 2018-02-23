@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
  *
  */
 public class AppendStringTask implements Runnable {
+	
 	/** Creating String data */
 	private String data = "";
 
