@@ -5,7 +5,13 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class AppendStringBuffer implements Runnable{
+/**
+ * 
+ * 
+ * @author Vichaphol Thamsutikul
+ *
+ */
+public class AppendStringBuffer implements Runnable {
 
 	public static String readFileByLine(String filename) {
 		FileReader reader = null;

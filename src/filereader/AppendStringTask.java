@@ -6,6 +6,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/**
+ * 
+ * 
+ * @author Vichaphol Thamsutikul
+ *
+ */
 public class AppendStringTask implements Runnable{
 
 	public static String readFileToString(String filename) {

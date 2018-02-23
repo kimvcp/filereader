@@ -10,10 +10,15 @@ import java.io.InputStreamReader;
 
 import javafx.beans.binding.StringBinding;
 
+/**
+ * Main class for reading files.
+ * 
+ * @author Vichaphol Thamsuthikul
+ *
+ */
 public class main {
 
 	public static void main(String[] args) {
-		
 		System.out.println("Reading Alice-in-Wonderland (new).txt using FileReader, append to String");
 		TaskTimer.runTask(new AppendStringTask());
 		System.out.println("Reading Alice-in-Wonderland (new).txt using FileReader, append to StringBuilder");

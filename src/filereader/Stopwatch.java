@@ -3,6 +3,12 @@ package filereader;
 import java.sql.Time;
 import java.util.Timer;
 
+/**
+ * 
+ * 
+ * @author Vichaphol Thamsutikul
+ *
+ */
 public class Stopwatch {
 	/** the value of nanosecond */
 	private static final double NANOSECOND = 1.0E-9;

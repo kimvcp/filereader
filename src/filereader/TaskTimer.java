@@ -1,5 +1,10 @@
 package filereader;
-
+/**
+ * 
+ * 
+ * @author Vichaphol Thamsutikul
+ *
+ */
 public class TaskTimer {
 
 	private static Stopwatch stopwatch = new Stopwatch();
