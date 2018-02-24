@@ -1,5 +1,5 @@
 # filereader
-by Vichaphol Thamsuthikul 6010545897
+## by Vichaphol Thamsuthikul 6010545897
 
 	------------------------------------------------|-----------------:												
 	Read file 1-char at a time to String 			| 0.681183 second
@@ -8,3 +8,6 @@ by Vichaphol Thamsuthikul 6010545897
 	------------------------------------------------|-----------------:
 
 ##Explanation of Results
+
+	StringBuilder is the fastest file reader because it collects data as the array so when it invokes the data, it doesn't need to create a new string and remove the old data like String. Actually BufferReader is the fastest, but it read as String in the method so it can be slower than StringBuilder. If you make it read as StringBuilder, it will be the fastest.
+  
